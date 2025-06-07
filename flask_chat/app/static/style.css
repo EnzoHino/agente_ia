@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e9f5ee;
+  position: relative;
+}
+
+/* Escudo no canto superior esquerdo */
+.logo-palmeiras {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.logo-palmeiras img {
+  width: 80px;
+  border-radius: 6px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,80,0,0.15);
+  border: 1px solid #1b5e20;
+}
+
+h1 {
+  color: #1b5e20;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+/* Input com mesma largura do chat-box */
+.container form input[type="text"] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  height: 35px;
+  padding: 6px 10px;
+  font-size: 16px;
+  border: 2px solid #66bb6a;
+  border-radius: 6px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#enviar {
+  background-color: #388e3c;
+  color: #fff;
+}
+#enviar:hover {
+  background-color: #2e7d32;
+}
+
+#encerrar {
+  background-color: #c62828;
+  color: #fff;
+}
+#encerrar:hover {
+  background-color: #b71c1c;
+}
+
+h2 {
+  text-align: center;
+  color: #1b5e20;
+  font-size: 22px;
+  margin: 30px 0 10px;
+}
+
+/* Chat-box */
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 400px;
+  padding: 10px;
+  background-color: #f1f8e9;
+  border: 2px solid #c8e6c9;
+  border-radius: 6px;
+  overflow-y: auto;
+}
+
+/* Bolhas de mensagem */
+.message {
+  max-width: 60%;
+  padding: 8px 12px;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Tipos */
+.usuario {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.agente {
+  align-self: flex-start;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.juiz {
+  align-self: flex-start;
+  background-color: #fff8b3;
+  border: 1px solid #e6c300;
+}
+
+.sistema {
+  align-self: center;
+  background: transparent;
+  color: #388e3c;
+  width: 100%;
+  border-top: 2px solid #388e3c;
+  text-align: center;
+  font-weight: bold;
+  padding: 4px 0;
+}

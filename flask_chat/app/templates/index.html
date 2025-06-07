@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Palmeiras</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <!-- Escudo no canto superior esquerdo -->
+  <div class="logo-palmeiras">
+    <img src="{{ url_for('static', filename='escudo-palmeiras.png') }}" alt="Escudo do Palmeiras">
+  </div>
+
+  <div class="wrapper">
+    <div class="container">
+      <h1>💚 Bem-vindo, Avanti!</h1>
+
+        <form method="POST" action="/">
+        <label for="mensagem">Digite sua mensagem:</label>
+        <input type="text" id="mensagem" name="mensagem" required>
+            <div class="botoes">
+                <button id="enviar"
+                        type="submit"
+                        name="enviar">
+                Enviar
+                </button>
+                <button id="encerrar"
+                        type="submit"
+                        name="encerrar"
+                        formnovalidate>
+                Limpar Conversa
+                </button>
+            </div>
+        </form>
+
+
+      <h2>Janela do Chat</h2>
+      <div class="chat-box">
+        {% for msg in historico %}
+          <div class="message {{ msg.tipo }}">
+            {{ msg.texto }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
