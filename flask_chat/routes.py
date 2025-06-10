@@ -38,7 +38,7 @@ def chat():
             msg = request.form.get("mensagem", "")
             registrar_log("usuario", msg)
             
-            registra_ia('TESTE')
+            registra_ia(msg)
         elif "encerrar" in request.form:
             with open(LOG_PATH, "w", encoding="utf-8") as f:
                 pass
